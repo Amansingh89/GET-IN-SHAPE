@@ -1,0 +1,14 @@
+{% extends "blog.html" %}
+{% block content %}
+    {% load bootstrap_tags %}
+<h1 class="addpost"></font>Add A Post</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form | as_bootstrap }}
+    <button type="submit" class=" btn btn-btn-info">Save</button>
+</form>
+
+
+
+{% endblock %}

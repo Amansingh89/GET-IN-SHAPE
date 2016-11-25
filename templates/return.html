@@ -1,0 +1,144 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <title>Fitness</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <!--Favicon -->
+    <link rel="icon" type="image/png" href="../static/images/favicon.jpg"/>
+
+    <!-- CSS Files -->
+
+    <link rel="stylesheet" href="../static/css/reset.css"/>
+    <link rel="stylesheet" href="../static/css/animate.min.css"/>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/style.css"/>
+    <link rel="stylesheet" href="../static/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../static/css/owl.carousel.css"/>
+    <link rel="stylesheet" href="../static/css/responsive.css"/>
+    <link rel="stylesheet" href="../static/css/player/YTPlayer.css"/>
+    <link href="../static/css/pro-bars.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+
+
+    <!-- End CSS Files -->
+    <style>
+
+
+        .tiptext {
+            background: blueviolet;
+            border: 1px #333 solid;
+            padding: 5px;
+        {#            width: 100px;#} margin-left: auto;
+            margin-right: auto;
+        }
+
+        .description {
+            display: none;
+            border: 2px solid #000;
+            width: auto;
+            height: auto;
+            margin-left: -97px;
+            /* margin-right: auto; */
+            background-color: white;
+            color: black;
+            font-style: italic;
+            font-size: 100%;
+            position: absolute;
+            top: 10px;
+        }
+
+        .inner-details .member-details {
+            background: #666666;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        #text {
+            font-family: 'Russo One', sans-serif;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<section id="navigation" class="dark-nav">
+    <!-- Navigation Inner -->
+    <div class="nav-inner">
+        <!-- Site Logo -->
+        <div class="site-logo fancy">
+            <a href="#" id="logo-text" class="scroll logo">Fitness Equipments
+            </a>
+        </div><!-- End Site Logo -->
+        <a class="mini-nav-button gray2"><i class="fa fa-bars"></i></a>
+        <!-- Navigation Menu -->
+        <div class="nav-menu">
+            <ul class="nav uppercase">
+               <li><a href="{% url 'index' %}" class="scroll">Home</a></li>
+					<li><a href="#about" class="scroll">About us</a></li>
+					<li><a href="/blog/" class="scroll">Blog</a></li>
+                    <li><a href="/products/">Products</a></li>
+{#                    {% if user.is_authenticated %}#}
+                    <li><a href="{% url 'logout' %}" >Log Out</a></li>
+{#                    {% else %}#}
+
+					<li><a href="{% url 'register' %}" >Register</a></li>
+					<li><a href="{% url 'login' %}" >Log In</a></li>
+{#                    {%  endif %}#}
+            </ul>
+        </div><!-- End Navigation Menu -->
+    </div><!-- End Navigation Inner -->
+</section>
+
+<!-- End Navigation Section -->
+
+<!-- Clients -->
+<
+
+
+<!-- JS Files -->
+
+<script type="text/javascript" src="../static/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery.appear.js"></script>
+<script type="text/javascript" src="../static/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="../static/js/modernizr-latest.js"></script>
+<script type="text/javascript" src="../static/js/SmoothScroll.js"></script>
+<script type="text/javascript" src="../static/js/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="../static/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../static/js/jquery.mb.YTPlayer.js"></script>
+<script type="text/javascript" src="../static/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="../static/js/jquery.slabtext.js"></script>
+<script type="text/javascript" src="../static/js/jquery.superslides.js"></script>
+<script type="text/javascript" src="../static/js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
+
+<script>
+
+    $("a.about-icon").hover(function () {
+        $(this).children("i").addClass("fa-spin");
+    }, function () {
+        $(this).children("i").removeClass("fa-spin");
+    });
+
+    $(".tiptext").mouseover(function () {
+        $(this).children(".description").show();
+    }).mouseout(function () {
+        $(this).children(".description").hide();
+    });
+</script>
+
+
+</body>
+
+</html>
+
+
+

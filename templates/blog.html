@@ -1,0 +1,125 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Fitness</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <!--Favicon -->
+    <link rel="icon" type="image/png" href="../static/images/favicon.jpg"/>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/player/YTPlayer.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/pro-bars.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <style>
+        p {
+            color: #cfcfcf;
+        }
+
+        div.inner {
+            text-align: left;
+        }
+
+        .btn-default {
+
+            background-color: #8BC3A3;
+
+        }
+        label{
+            color: white;
+        }
+        .addpost{
+            color: white;
+        }
+        hr{
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- Navigation -->
+<section id="navigation" class="dark-nav">
+    <!-- Navigation Inner -->
+    <div class="nav-inner">
+        <!-- Site Logo -->
+        <div class="site-logo fancy">
+            <a href="#" id="logo-text" class="scroll logo">Fitness Equipments
+            </a>
+        </div><!-- End Site Logo -->
+        <a class="mini-nav-button gray2"><i class="fa fa-bars"></i></a>
+        <!-- Navigation Menu -->
+        <div class="nav-menu">
+            <ul class="nav uppercase">
+               <li><a href="{% url 'index' %}" class="scroll">Home</a></li>
+					<li><a href="/blog/" class="scroll">Blog</a></li>
+                    <li><a href="/products/">Products</a></li>
+                    <li><a href="/contact/" class="scroll">Contact us</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}" >Log Out</a></li>
+                    {% else %}
+
+					<li><a href="{% url 'register' %}" >Register</a></li>
+					<li><a href="{% url 'login' %}" >Log In</a></li>
+                    {%  endif %}
+
+            </ul>
+        </div><!-- End Navigation Menu -->
+    </div><!-- End Navigation Inner -->
+</section><!-- End Navigation Section -->
+
+<section id="features" class="container">
+
+    <div class="inner">
+        <br>
+        <br>
+        <!-- Header -->
+        <h1 class="header light gray1">Let's talk about <span class="colored fancy">Fitness!</span></h1>
+        <br>
+        <div>
+            {% block content %}
+
+
+            {% endblock %}
+        </div><!-- End Features Boxes -->
+        <!-- End Features Inner -->
+    </div>
+    <hr>
+  <footer style="text-align: center; color: white" >&copy; Copyright 2016 Amanpreet Singh</footer>
+
+</section><!-- End Features Section -->
+<script type="text/javascript" src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.appear.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/modernizr-latest.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/SmoothScroll.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.superslides.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.flexslider.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.mb.YTPlayer.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.fitvids.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.slabtext.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
+<script>
+    $("a.about-icon").hover(function () {
+        $(this).children("i").addClass("fa-spin");
+    }, function () {
+        $(this).children("i").removeClass("fa-spin");
+    });
+</script>
+
+
+</body>
+
+</html>
