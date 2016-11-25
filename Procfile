@@ -1,1 +1,1 @@
-web: gunicorn get-in-shape.wsgi:application
+web: gunicorn fitnessproject.wsgi:application
