@@ -43,7 +43,7 @@
 {#            color: #072f5b;#} text-align: center;
             cursor: pointer;
             outline: none;
-            color: blue;
+            color: black;
             background-color: #fee9c2;
             border: none;
             border-radius: 15px;
@@ -80,7 +80,7 @@
         }
 
         .inner-details .member-details {
-            background: #666666;
+            background: #8cc3a6;
             border-radius: 0px 0px 10px 10px;
         }
 
@@ -149,7 +149,7 @@
         <p class="h-desc gray4"><span class="colored bold">Exercise equipment is any apparatus or device used during physical activity to enhance the strength or conditioning effects of that exercise by providing either fixed or adjustable amounts of resistance, or to otherwise enhance the experience or outcome of an exercise routine.</span>
         </p>
 
-
+        <hr>
         <!-- Members -->
         {% for product in products %}
             <div class="team-members inner-details">
@@ -173,7 +173,7 @@
                         <div class="member-details-inner">
                             <!-- Name -->
 
-                            <h1 class="member-name bold fancy" align="center"><font color="white"
+                            <h1 class="member-name bold fancy" align="center"><font color="black"
                                                                                     id="text">{{ product.name }}</font>
                             </h1>
                             <table class="table table-striped">
@@ -221,10 +221,11 @@
         </div><!-- End Members -->
         </div>
     <!-- End Team Inner -->
- </section><!-- End Team Section -->
-
 <hr>
   <footer style="text-align: center" >&copy; Copyright 2016 Amanpreet Singh</footer>
+
+ </section><!-- End Team Section -->
+
 
 
 <!-- JS Files -->

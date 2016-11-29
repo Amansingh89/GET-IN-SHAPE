@@ -87,13 +87,13 @@ WSGI_APPLICATION = 'fitnessproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
-DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
+#
+# CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
+# DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -165,6 +165,6 @@ EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
 
 
-ALLOWED_HOSTS = ['get-in-shape.herokuapp.com', 'localhost']
+# ALLOWED_HOSTS = ['get-in-shape.herokuapp.com', 'localhost']
 
 

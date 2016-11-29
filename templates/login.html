@@ -29,20 +29,20 @@
     <style>
 
         legend {
-            color: #0392cd;
+            color: white;
             font-weight: bold;
         }
 
         #div_id_password1 {
-            color: #0392cd;
+            color: white;
         }
 
         #div_id_password2 {
-            color: #0392cd;
+            color: white;
         }
 
         #div_id_email {
-            color: #0392cd;
+            color: white;
         }
 
         #id_email, #id_password1, #id_password2, #id_password {
@@ -50,8 +50,19 @@
         }
 
         #profile {
-            color: #0392cd;
+            color: white;
         }
+
+        html, body
+        {background: url(../static/images/parallax/2.jpg);}
+
+    .testimonials {
+{#    background: url(../static/images/parallax/2.jpg) center center fixed;#}
+    padding: 70px 0 70px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
     </style>
 
 </head>
@@ -71,7 +82,7 @@
         <!-- Navigation Menu -->
         <div class="nav-menu">
             <ul class="nav uppercase">
-               <li><a href="{% url 'index' %}" class="scroll">Home</a></li>
+              <li><a href="{% url 'index' %}" class="scroll">Home</a></li>
 					<li><a href="/blog/" class="scroll">Blog</a></li>
                     <li><a href="/products/">Products</a></li>
                     <li><a href="/contact/" class="scroll">Contact us</a></li>
@@ -82,6 +93,7 @@
 					<li><a href="{% url 'register' %}" >Register</a></li>
 					<li><a href="{% url 'login' %}" >Log In</a></li>
                     {%  endif %}
+
 
             </ul>
         </div><!-- End Navigation Menu -->
