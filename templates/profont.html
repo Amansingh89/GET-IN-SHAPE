@@ -30,17 +30,13 @@
 
 
         .tiptext {
-{#            background: #ffb84d;#}
-{#            border: 1px #333 solid;#}
             padding: 5px;
-        {#            width: 100px;#} margin-left: auto;
+            margin-left: auto;
             margin-right: auto;
-{#            margin-right: auto;#}
-{#            border-radius: 10px;#}
+
             font-weight: bolder;
             font-style: italic;
-{##}
-{#            color: #072f5b;#} text-align: center;
+            text-align: center;
             cursor: pointer;
             outline: none;
             color: black;
@@ -188,13 +184,6 @@
                             </a>
 
 
-                            {#                                {% block content %}#}
-                            {##}
-                            {#                                 {% endblock %}#}
-
-                            <!-- Description -->
-
-                            <!-- Socials -->
 
                         </div>
 
@@ -253,10 +242,10 @@
         $(this).children("i").removeClass("fa-spin");
     });
 
-    $(".tiptext").mouseover(function () {
-        $(this).children(".description").show();
+    $(".tiptext").click(function () {
+        $(this).children(".description").show(".description");
     }).mouseleave(function () {
-        $(this).children(".description").hide();
+        $(this).children(".description").hide(".description");
     });
 </script>
 
