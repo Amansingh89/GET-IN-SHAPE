@@ -1,4 +1,5 @@
 {% load static from staticfiles %}
+{% load bootstrap_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,10 +51,6 @@
 
 
 
-    body {
-    background: url(../static/images/parallax/2.jpg) center center fixed;
-
-}
     </style>
 
 </head>
@@ -90,6 +87,9 @@
 
 <section id="testimonial" class="testimonials parallax2">
     <div class="inner">
+
+
+
         {% if messages %}
             <div class="alert alert-success">
                 <div class="messages">
@@ -99,23 +99,21 @@
                 </div>
             </div>
         {% endif %}
-        <div id="profile" class="container">
-            {% load bootstrap_tags %}
 
-            <form role="form" method="post" action="{% url 'register' %}">
-                <legend>CREATE A NEW ACCOUNT</legend>
-                {% csrf_token %}
-                {{ form| as_bootstrap }}
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Create account</button>
-                </div>
-            </form>
-        </div>
+
+
+
+         {% block content %}
+
+         {% endblock %}
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
-        <br>
-        <br>
-        <br>
-        <br>
 </section>
         <!-- Footer -->
          <hr>
