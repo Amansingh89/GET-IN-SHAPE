@@ -1,5 +1,5 @@
 {% extends "blog.html" %}
-{% load staticfiles %}
+{% load static from staticfiles %}
 {% block content %}
     <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">New Post</button>
     {% for post in posts %}

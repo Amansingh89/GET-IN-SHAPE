@@ -21,7 +21,7 @@ SITE_ID = 1
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'd^d#==eh&g3yr8l=1$7ddacjax@1)k&dec6xs3b=md4jgx&c91')
 
 
 
@@ -86,13 +86,13 @@ WSGI_APPLICATION = 'fitnessproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 #
-CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL")
-DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
+# CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL")
+# DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -172,17 +172,17 @@ AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
     'Cache-Control': 'max-age=94608000',
 }
 
-AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
-AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME', 'get-in-shape')
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID', 'AKIAJSVT6NZS7CZV45IA')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY', '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')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_HOST = 's3-eu-west-1.amazonaws.com'
 
 
 # # STATIC_URL = '/static/'
-# STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, "static"),
-# )
+STATICFILES_DIRS = (
+   os.path.join(BASE_DIR, "static"),
+)
 
 STATICFILES_LOCATION = 'static'
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
