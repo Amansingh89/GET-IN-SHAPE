@@ -44,7 +44,7 @@ def register(request):
     args = {'form': form}
     args.update(csrf(request))
 
-    return render(request, 'create-account.html', args)
+    return render(request, 'register.html', args)
 
 
 def login(request):
