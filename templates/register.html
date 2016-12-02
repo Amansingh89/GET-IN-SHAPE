@@ -1,5 +1,5 @@
 {% load static from staticfiles %}
-{% load bootstrap_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +9,7 @@
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <!--Favicon -->
-    <link rel="icon" type="image/png" href={% static 'images/favicon.jpg' %}/>   <!-- CSS Files -->
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.jpg' %}"/>   <!-- CSS Files -->
 
     <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/animate.min.css' %}"/>
@@ -33,6 +33,10 @@
             color: white;
         }
 
+        #div_id_password{
+            color: white;
+        }
+
         #div_id_password2 {
             color: white;
         }
@@ -40,6 +44,7 @@
         #div_id_email {
             color: white;
         }
+
 
         #id_email, #id_password1, #id_password2, #id_password {
             background-color: #cfdff9;
@@ -49,10 +54,10 @@
             color: #0392cd;
         }
 
-        body{
-{#             background : url(/static/images/parallax/2.jpg);#}
-             background : ({% static 'images/parallax/2.jpg' %});
+        html, body{
+            background-image:url({% static 'images/parallax/2.jpg' %});
         }
+
 
 
     </style>
