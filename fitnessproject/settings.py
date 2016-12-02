@@ -149,7 +149,7 @@ DISQUS_WEBSITE_SHORTNAME = 'mybootcampblog'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_URL = '/media/'
 
-SITE_URL = 'http://127.0.0.1:8000'
+SITE_URL = os.getenv('SITE_URL')
 PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
 PAYPAL_RECEIVER_EMAIL = 'amansalh-facilitator@live.com'
 
