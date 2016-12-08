@@ -405,10 +405,10 @@ License URI:http://www.gnu.org/licenses/gpl-2.0.htmlcf
 
 /* Background Slider Images  */
 
-	.slides-container div,
-	.home{
-		background-size:100%;
-	}
+	/*.slides-container div,*/
+	/*.home{*/
+		/*background-size:100%;*/
+	/*}*/
 
 	#slides .slides-container div{
 		background-position:center center;
