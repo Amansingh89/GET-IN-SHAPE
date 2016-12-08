@@ -92,6 +92,7 @@
         }
 
 
+
     </style>
 
 
@@ -150,7 +151,9 @@
 
 {#            </div>#}
             <div class="col-sm-4 box">
+                <a href="{{ MEDIA_URL }}{{ product.image }}">
                 <img height="150" width="150" src="{{ MEDIA_URL }}{{ product.image }}">
+                    </a>
             <div class="pull-right">Price: € {{ product.price }}<br>
             <h4>Review <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></h4></div>
 
