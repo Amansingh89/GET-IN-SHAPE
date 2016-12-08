@@ -79,7 +79,7 @@ License URI:http://www.gnu.org/licenses/gpl-2.0.htmlcf
 
 	p{
 		margin:0 0 5px;
-		color: whitesmoke !important;
+		color: black!important;
 
 
 	}
@@ -623,89 +623,89 @@ License URI:http://www.gnu.org/licenses/gpl-2.0.htmlcf
 	}	
 
 /*!* About *!*/
-   /*@media (min-width:600px) and (max-width:1020px){*/
-	/*p.lead.lead-text {*/
-		/*margin-top: 20px;*/
-		/*}*/
-	/*}*/
-	/*#about .inner .boxes{*/
-		/*overflow: hidden;*/
-	/*}*/
+   @media (min-width:800px) and (max-width:1020px){
+	p.lead.lead-text {
+		margin-top: 20px;
+		}
+	}
+	#about .inner .boxes{
+		overflow: hidden;
+	}
 
-	/*#about .inner .boxes:after{*/
-		/*clear: both;*/
-	/*}*/
+	#about .inner .boxes:after{
+		clear: both;
+	}
 
-	/*.about-box{*/
-		/*text-align: center;*/
-		/*margin:0px auto 0;*/
-		/*cursor: pointer;*/
-	/*}*/
-/*!* About Icon Styles *!*/
+	.about-box{
+		text-align: center;
+		margin:0px auto 0;
+		cursor: pointer;
+	}
+/* About Icon Styles */
 
-	/*.about-icon{*/
-		/*display:block;*/
-		/*width:120px;*/
-		/*height: 120px;*/
-		/*position: relative;*/
-		/*border-radius:50%;*/
-		/*z-index: 3;*/
-		/*margin:1px auto;*/
-		/*text-align: center;*/
-	/*}*/
+	.about-icon{
+		display:block;
+		width:120px;
+		height: 120px;
+		position: relative;
+		border-radius:50%;
+		z-index: 3;
+		margin:1px auto;
+		text-align: center;
+	}
 
-	/*.about-icon:before{*/
-		/*width:120px;*/
-		/*height: 120px;*/
-		/*content:'';*/
-		/*z-index: 1;*/
-		/*position: absolute;*/
-		/*background: #8BC3A3;		*/
-		/*border: none;*/
-		/*border-radius:50%;*/
-		/*top:-1px;*/
-		/*left:-1px;*/
-		/*-webkit-transition: all 0.3s;*/
-		/*-moz-transition: all 0.3s;*/
-		/*transition: all 0.3s;*/
-	/*}*/
+	.about-icon:before{
+		width:120px;
+		height: 120px;
+		content:'';
+		z-index: 1;
+		position: absolute;
+		background: #8BC3A3;
+		border: none;
+		border-radius:50%;
+		top:-1px;
+		left:-1px;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
 
-	/*.about-icon i{*/
-		/*font-size:4em;*/
-		/*color:#fff;*/
-		/*z-index: 4;*/
-		/*position: relative;*/
-		/*line-height: 120px;*/
-		/*-webkit-transition: all 0.3s;*/
-		/*-moz-transition: all 0.3s;*/
-		/*transition: all 0.3s;*/
-	/*}*/
+	.about-icon i{
+		font-size:4em;
+		color:#fff;
+		z-index: 4;
+		position: relative;
+		line-height: 120px;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
 
 
-/*!* About Box Hover Styles *!*/
+/* About Box Hover Styles */
 
-	/*.about-box:hover .about-icon:before{*/
-		/*background:#252525;*/
-	/*}*/
+	.about-box:hover .about-icon:before{
+		background:#252525;
+	}
 
-	/*.about-box:hover .about-icon:after{*/
-		/*background:#252525;*/
-	/*}*/
+	.about-box:hover .about-icon:after{
+		background:#252525;
+	}
 
-	/*.about-box:hover .about-icon i{*/
-		/*color:#fff;*/
-	/*}*/
+	.about-box:hover .about-icon i{
+		color:#fff;
+	}
 
-	/*.about-box .about-head{*/
-		/*margin:25px auto 20px;*/
-		/*font-size:1.5em;*/
-		/*border-top:#ddd 1px solid;*/
-		/*padding-top:20px;*/
-	/*}*/
+	.about-box .about-head{
+		margin:25px auto 20px;
+		font-size:1.5em;
+		border-top:#ddd 1px solid;
+		padding-top:20px;
+	}
 
-	/*.about-box .about-text{*/
-		/*font-size: 14px;*/
-	/*}*/
+	.about-box .about-text{
+		font-size: 14px;
+	}
 
 
 /* Services */
@@ -994,9 +994,9 @@ License URI:http://www.gnu.org/licenses/gpl-2.0.htmlcf
 		z-index: 2;
 	}
 
-	.team-members .member a.team-image img{
-		width: 100%;
-	}
+	/*.team-members .member a.team-image img{*/
+		/*width: 100%;*/
+	/*}*/
 
 	.inner-details .member-details{
 		position: absolute;
@@ -1228,7 +1228,7 @@ License URI:http://www.gnu.org/licenses/gpl-2.0.htmlcf
 	.button{
 		padding:8px 12px;
 		background:#333333;
-		display: block;
+
 		width:120px;
 		margin:10px 0 0px 0;
 		border-radius:3px;

@@ -16,25 +16,20 @@
     <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/animate.min.css' %}"/>
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
-
-	<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/player/YTPlayer.css' %}"/>
 	<link rel="stylesheet" href="{% static 'css/pro-bars.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
 
     <!-- End CSS Files -->
     <style>
-
-
         .tiptext {
-            padding: 5px;
-            margin-left: auto;
             margin-right: auto;
-
             font-weight: bolder;
             font-style: italic;
             text-align: center;
@@ -45,7 +40,6 @@
             border: none;
             border-radius: 15px;
             box-shadow: 0 9px #eea22e;
-
         }
 
         .button:hover {
@@ -57,52 +51,49 @@
             box-shadow: 0 5px #666;
             transform: translateY(4px);
         }
+.description {
+    display: none;
+    border: 2px solid #000;
+    width: auto;
+    height: auto;
+    background-color: white;
+    color: black;
+    font-style: italic;
+    position: absolute;
+    top: 5px;
+    margin: 5px;
+    border-radius: 15px;
+}
 
+        .box{
+            border: 2px solid black;
+            border-radius: 15px;
+            box-shadow: 9px 9px #eea22e;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            margin-right: 15px;
+        }
 
-
-
-        .description {
-            display: none;
-            border: 2px solid #000;
-            width: auto;
-            height: auto;
-            margin-left: -97px;
-            /* margin-right: auto; */
-            background-color: white;
+        .pull-right{
+            margin-top: 60px;
+            margin-right: 40px;
+            font-weight: bold;
             color: black;
-            font-style: italic;
-            font-size: 100%;
-            position: absolute;
-            top: 10px;
         }
 
-        .inner-details .member-details {
-            background: #8cc3a6;
-            border-radius: 0px 0px 10px 10px;
+        .fa-star{
+            color: #ffff48;
         }
 
-        #text {
-            font-family: 'Russo One', sans-serif;
+        #name{
+            text-align: center;
+            font-weight: bold;
+            font-size: xx-large;
         }
 
-        hr {
-
-            border-top: 1px solid black;
-            margin-left: 200px;
-            margin-right: 200px;
+        #paypal{
+            margin-bottom: 5px;
         }
-
-        .header{
-            margin-top: 20px;
-        }
-
-
-
-
-
-
-
-
     </style>
 
 
@@ -143,13 +134,13 @@
 <!-- End Navigation Section -->
 
 <!-- Clients -->
-<section id="clients" class="container">
+<section id="clients" >
 
     <!-- Team Inner -->
     <div class="inner team">
 
         <!-- Header -->
-        <h1 class="header light gray3 fancy"><span class="colored">Our </span>Equipments</h1>
+        <h1 style="margin-top: 10px"   class="header light gray3 fancy"><span class="colored">Our </span>Equipments</h1>
 
         <!-- Description -->
         <p class="h-desc gray4"><span class="colored bold">Exercise equipment is any apparatus or device used during physical activity to enhance the strength or conditioning effects of that exercise by providing either fixed or adjustable amounts of resistance, or to otherwise enhance the experience or outcome of an exercise routine.</span>
@@ -158,61 +149,27 @@
         <hr>
         <!-- Members -->
         {% for product in products %}
-            <div class="team-members inner-details">
+
+{#            </div>#}
+            <div class="col-sm-4 box">
+                <img height="150" width="150" src="{{ MEDIA_URL }}{{ product.image }}">
+            <div class="pull-right">Price: € {{ product.price }}<br>
+            <h4>Review <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></h4></div>
+
+                <div id="name">{{ product.name }}</div>
+                <hr>
 
 
-            <!-- Member -->
-            <div class="col-sm-4 member animated" data-animation="fadeInUp" data-animation-delay="0">
-                <div class="member-inner">
-                    <!-- Team Member Image -->
-                    <a class="team-image">
-                        <!-- Img -->
-                        {#							<img src="/static/images/clients/9.jpg" alt="" />#}
-
-                        {#						</a>#}
-                        <img height="300" width="300" src="{{ MEDIA_URL }}{{ product.image }}">
-
-
-                    </a>
-
-                    <div class="member-details">
-                        <div class="member-details-inner">
-                            <!-- Name -->
-
-                            <h1 class="member-name bold fancy" align="center"><font color="black"
-                                                                                    id="text">{{ product.name }}</font>
-                            </h1>
-                            <table class="table table-striped">
-                                <tr>
-                                    <td>Price ${{ product.price }}</td>
-                                    <td>{{ product.paypal_form.sandbox }}</td>
-                                </tr>
-                            </table>
-
-                            <a class="tiptext button">DESCRIPTION
+               <a style="display: inline"    class="tiptext button">DESCRIPTION
                                 <div class="description"> {{ product.description }}</div>
                             </a>
 
 
-
-
-
-                        </div>
-
-
-                        <!-- End Detail Inner -->
-                    </div>
-
-                    <!-- End Details -->
-
-                </div>
-
-
-                <!-- End Member Inner -->
+            <div id="paypal"  style="display: flex; justify-content: flex-end">{{ product.paypal_form.sandbox }}</div>
 
             </div>
-            </div>
 
+{#            </div>#}<!-- Members -->
         {% endfor %}
         <div class="container">
             {% block content %}
@@ -248,18 +205,21 @@
 
 <script>
 
-    $("a.about-icon").hover(function () {
-        $(this).children("i").addClass("fa-spin");
-    }, function () {
-        $(this).children("i").removeClass("fa-spin");
-    });
 
     $(".tiptext").click(function () {
-        $(this).children(".description").show(".description");
+
+
+        $(this).children(".description").slideToggle();
     }).mouseleave(function () {
-        $(this).children(".description").hide(".description");
+        $(this).children(".description").hide();
     });
+
 </script>
+
+
+
+
+
 
 
 </body>
